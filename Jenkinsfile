@@ -25,7 +25,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('DevOpsSonarQube') {
                     withMaven(maven:'maven3'){
-                        sh 'mvn sonar:sonar'
+                        sh 'mvn -X sonar:sonar'
                     }
                 }
             }
